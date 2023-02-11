@@ -109,9 +109,7 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--main-header-color);
-  /* margin-right: 76px; */
 }
-/* тут правий марджин!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
 .blue-logo-text {
   color: var(--brand-color);
@@ -922,6 +920,8 @@ img {
   color: #ffffff;
   outline: none;
   transition: border-color 250ms var(--cubic);
+  margin-right: 24px;
+  /* _____________________________________ТУТ МАРДЖИН ПРАВИЙ НА ПОЧТІ, ІНАКШЕ НЕ МОЖУ ЇХ ВДЦЕНТРУВАТИ, 2 ГОДИНИ НА ФУТКРІ ЗАСТРЯГ.....____________  */
 }
 
 .footer-email:is(:hover, :focus, :active) {
@@ -972,13 +972,19 @@ img {
     flex-direction: row;
     gap: 24px;
     align-items: center;
+    justify-content: space-between;
     /* width: 264px; */
   }
-  /* .footer-section {
-    justify-content: center;
-  } */
+  .footer-part-one {
+    margin-left: 0;
+    text-align: left;
+  }
+  .footer-part-two {
+    margin-left: 0;
+    text-align: left;
+  }
   .footer-part-three {
-    text-align: center;
+    text-align: left;
   }
 }
 
