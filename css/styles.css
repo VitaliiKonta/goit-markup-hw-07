@@ -767,8 +767,10 @@ img {
 }
 .client-list {
   display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  row-gap: 72px;
   justify-content: center;
-  gap: 24px;
 }
 
 .client-link {
@@ -785,7 +787,20 @@ img {
   border: 1px solid;
   border-color: var(--btn-accent-color);
 }
+@media screen and (min-width: 768px) {
+  .client-list {
+    gap: 24px;
+    row-gap: 72px;
+  }
+}
 
+@media screen and (min-width: 1200px) {
+  .client-list {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+  }
+}
 /* ==============================FOOTER========================= */
 
 .footer-section {
