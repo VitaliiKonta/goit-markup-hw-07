@@ -29,17 +29,47 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+  width: 100%;
 }
 
 .container {
-  width: 1158px;
+  width: 100%;
+  max-width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-  /* outline: solid tomato; */
 }
-/* -----------------------outline shpuld be deleted later!! */
+@media screen and (min-width: 428px) {
+  .container {
+    width: 428px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 16px;
+    padding-left: 16px;
+    width: 1160px;
+  }
+}
 
 .link {
   text-decoration: none;
@@ -168,7 +198,7 @@ img {
 /* +++++++++++++++++++++++++++++++++========================MAIN-PAGE========================================+++++++++++++++++++ */
 /* ===========================HERO================================ */
 
-.hero-background {
+.hero-section {
   background: var(--background-color);
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
@@ -179,30 +209,26 @@ img {
   background-position: center;
   background-size: 1440px 100%;
   box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
-}
-
-.hero-container {
-  max-width: 1440px;
-
+  max-width: 767px;
   text-align: center;
-  padding-bottom: 188px;
-  padding-top: 188px;
+  padding-bottom: 112px;
+  padding-top: 112px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .hero-title {
   font-weight: 700;
-  font-size: 56px;
-  line-height: 1.07;
+  font-size: 36px;
+  line-height: 1.11;
   letter-spacing: 0.02em;
-
-  max-width: 500px;
+  max-width: 318px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 48px;
+  margin-bottom: 72px;
   color: #ffffff;
 }
+
 .hero-btn {
   background: var(--brand-color);
   font-family: "Roboto";
@@ -225,6 +251,40 @@ img {
   background-color: var(--btn-accent-color);
 }
 
+@media screen and (min-width: 768px) {
+  .hero-section {
+    max-width: 768px;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-office-bgi.jpg);
+  }
+  .hero-title {
+    font-size: 56px;
+    max-width: 494px;
+    margin-bottom: 40px;
+    line-height: 1.07;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero-section {
+    max-width: 1440px;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-office-bgi.jpg);
+    background-size: cover;
+    padding-top: 188px;
+    padding-bottom: 188px;
+  }
+  .hero-title {
+    margin-bottom: 48px;
+    line-height: 1.07;
+  }
+}
 /* ==============================MODAL================++++++++++++++++++++++========= */
 
 .is-hidden {
