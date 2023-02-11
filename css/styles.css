@@ -503,8 +503,6 @@ img {
   align-items: center;
 } */
 
-/* ++++++++++++++++++++++++++++++++++++++++++++++++++NO CHECKBOX ICON!!!!!!!!!!!!!!!!!!!!!!!!!!!!!+++++++++++++++++++++++++++++++++++++ */
-
 .submit-btn {
   display: block;
   margin: 0 auto;
@@ -529,48 +527,91 @@ img {
 /* /* ==============================BENEFITS========================= *++++++++++++++/ */
 
 .benefits-item-list {
-  display: flex;
 }
 
 .benefits-section {
   padding-right: 0px;
   padding-left: 0px;
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
-
-.benefits-item:not(:last-child) {
-  margin-right: 24px;
-}
-
 .benefits-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 112px;
-  /* padding: 24px 100px; */
-  background: #f4f4fd;
-  border-radius: 4px;
+  display: none;
 }
-
 .benefits-item {
-  width: 264px;
+  width: 396px;
 }
-
+.benefits-item:not(:last-child) {
+  margin-bottom: 72px;
+}
 .benefits-title {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 40px;
+  text-align: center;
   letter-spacing: 0.02em;
+  text-transform: capitalize;
   color: var(--main-header-color);
   margin-bottom: 8px;
-  margin-top: 8px;
 }
 .benefits-text {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  font-weight: 500;
 }
+
+@media screen and (min-width: 768px) {
+  .benefits-item-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+  .benefits-item {
+    width: 356px;
+  }
+  .benefits-item:nth-child(n + 3) {
+    margin-bottom: 0;
+  }
+
+  .benefits-title {
+    text-align: left;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .benefits-section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    justify-content: center;
+  }
+  .benefits-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 112px;
+    background: #f4f4fd;
+    border-radius: 4px;
+  }
+  .benefits-item-list {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 24px;
+  }
+  .benefits-item-list > .benefits-item {
+    width: 264px;
+    margin-bottom: 0;
+  }
+  .benefits-title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+  }
+  .benefits-text {
+    font-weight: 400;
+  }
+}
+
 /* ==============================WHAT WE ARE DOING========================= */
 .about-section {
   padding-bottom: 120px;
