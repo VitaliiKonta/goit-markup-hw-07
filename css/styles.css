@@ -558,6 +558,10 @@ img {
 }
 
 @media screen and (min-width: 768px) {
+  .benefits-section {
+    max-width: 768px;
+    margin: 0 auto;
+  }
   .benefits-item-list {
     display: flex;
     flex-wrap: wrap;
@@ -576,6 +580,7 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .benefits-section {
+    max-width: 1440px;
     padding-top: 120px;
     padding-bottom: 120px;
     justify-content: center;
@@ -612,10 +617,15 @@ img {
 .about-section {
   display: none;
 }
+@media screen and (min-width: 768px) {
+  .about-section {
+    max-width: 767px;
+  }
+}
 
 @media screen and (min-width: 1200px) {
   .about-section {
-    display: block;
+    max-width: 1440px;
     padding-bottom: 120px;
   }
 
@@ -729,6 +739,8 @@ img {
 }
 @media screen and (min-width: 768px) {
   .team-section {
+    margin: 0 auto;
+    max-width: 768px;
     padding-top: 96px;
     padding-bottom: 104px;
   }
@@ -736,6 +748,7 @@ img {
 
 @media screen and (min-width: 1200px) {
   .team-section {
+    max-width: 1440px;
     padding-top: 120px;
     padding-bottom: 120px;
   }
@@ -751,6 +764,7 @@ img {
 .client-section {
   padding-top: 130px;
   padding-bottom: 120px;
+  max-width: 100%;
 }
 
 .client-title {
@@ -786,6 +800,10 @@ img {
   border-color: var(--btn-accent-color);
 }
 @media screen and (min-width: 768px) {
+  .client-section {
+    max-width: 768px;
+    margin: 0 auto;
+  }
   .client-list {
     gap: 24px;
     row-gap: 72px;
@@ -793,6 +811,9 @@ img {
 }
 
 @media screen and (min-width: 1200px) {
+  .client-section {
+    max-width: 1440px;
+  }
   .client-list {
     display: flex;
     flex-wrap: nowrap;
@@ -804,6 +825,7 @@ img {
 .footer-section {
   padding-top: 96px;
   padding-bottom: 96px;
+  max-width: 100%;
 }
 .footer-background {
   background: var(--background-color);
@@ -896,6 +918,7 @@ img {
 
 .footer-part-three {
   text-align: center;
+  max-width: 100%;
 }
 .footer-form {
   display: flex;
@@ -903,6 +926,7 @@ img {
   gap: 24px;
   align-items: center;
   margin-top: 16px;
+  max-width: inherit;
 }
 
 .footer-email {
@@ -920,8 +944,6 @@ img {
   color: #ffffff;
   outline: none;
   transition: border-color 250ms var(--cubic);
-  margin-right: 24px;
-  /* _____________________________________ТУТ МАРДЖИН ПРАВИЙ НА ПОЧТІ, ІНАКШЕ НЕ МОЖУ ЇХ ВДЦЕНТРУВАТИ, 2 ГОДИНИ НА ФУТКРІ ЗАСТРЯГ.....____________  */
 }
 
 .footer-email:is(:hover, :focus, :active) {
@@ -955,17 +977,23 @@ img {
   fill: #ffffff;
 }
 @media screen and (min-width: 768px) {
+  .footer-section {
+    max-width: 768px;
+    margin: 0 auto;
+  }
   .footer-content {
     flex-direction: row;
     row-gap: 72px;
     column-gap: 24px;
     justify-content: unset;
     flex-wrap: wrap;
+
     margin: 0 auto;
     max-width: 552px;
   }
   .footer-email {
     width: 264px;
+    margin-right: 24px;
   }
   .footer-form {
     display: flex;
@@ -973,6 +1001,7 @@ img {
     gap: 24px;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
     /* width: 264px; */
   }
   .footer-part-one {
@@ -990,6 +1019,7 @@ img {
 
 @media screen and (min-width: 1200px) {
   .footer-section {
+    max-width: 1440px;
     padding-top: 100px;
     padding-bottom: 100px;
   }
@@ -1002,7 +1032,7 @@ img {
     max-width: none;
   }
   .footer-email {
-    padding-left: 40px;
+    margin-right: 0;
   }
   /* .footer-part-three {
     padding-left: 80px;
