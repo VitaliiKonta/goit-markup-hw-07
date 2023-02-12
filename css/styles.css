@@ -160,14 +160,11 @@ img {
   height: 100vh;
   background-color: #ffffff;
   transition: transform 250ms var(--cubic);
-  transform: translateX(100%);
-}
-і .mob-menu.is-open {
-  transform: translateX(0);
+  transform: translatey(100%);
 }
 
-.mobile-menu.is-open {
-  transform: translateX(0);
+.mob-menu.is-open {
+  transform: translatey(0);
 }
 
 .mob-container {
@@ -181,9 +178,9 @@ img {
   padding-bottom: 40px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   overflow-y: auto;
-  /* margin: 0 auto; */
+  margin: 0 auto;
   position: relative;
 }
 
