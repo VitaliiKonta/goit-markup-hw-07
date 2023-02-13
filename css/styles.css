@@ -35,7 +35,7 @@ img {
 
 .container {
   width: 100%;
-  max-width: 100%;
+  /* max-width: 100%; */
   padding-right: 16px;
   padding-left: 16px;
   margin-left: auto;
@@ -46,31 +46,18 @@ img {
 
 @media screen and (min-width: 480px) {
   .container {
-    width: 480px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-right: 16px;
-    padding-left: 16px;
+    width: 428px;
   }
 }
 
 @media screen and (min-width: 768px) {
   .container {
     width: 768px;
-
-    margin-left: auto;
-    margin-right: auto;
-    padding-right: 16px;
-    padding-left: 16px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .container {
-    margin-left: auto;
-    margin-right: auto;
-    padding-right: 16px;
-    padding-left: 16px;
     width: 1160px;
   }
 }
@@ -170,7 +157,7 @@ img {
 .mob-container {
   height: 100%;
   width: 100%;
-  max-width: 479px;
+  max-width: 767px;
 
   padding-left: 40px;
   padding-right: 40px;
@@ -291,7 +278,7 @@ img {
 
 @media screen and (min-width: 480px) {
   .header-border {
-    max-width: 480px;
+    max-width: 428px;
     margin: 0 auto;
   }
   .mob-soc-list {
@@ -436,7 +423,7 @@ img {
   background-position: center;
   background-size: cover;
   box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
-  max-width: 767px;
+  /* max-width: 767px; */
   text-align: center;
   padding-bottom: 112px;
   padding-top: 112px;
@@ -476,6 +463,12 @@ img {
 }
 .hero-btn:active {
   background-color: var(--btn-accent-color);
+}
+
+@media screen and (min-width: 480px) {
+  .hero-section {
+    max-width: 428px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -761,6 +754,7 @@ img {
   padding-left: 0px;
   padding-top: 96px;
   padding-bottom: 96px;
+  margin: 0 auto;
 }
 .benefits-icon {
   display: none;
@@ -788,6 +782,11 @@ img {
   font-weight: 500;
 }
 
+@media screen and (min-width: 480px) {
+  .benefits-section {
+    max-width: 428px;
+  }
+}
 @media screen and (min-width: 768px) {
   .benefits-section {
     max-width: 768px;
@@ -847,15 +846,12 @@ img {
 /* ==============================WHAT WE ARE DOING========================= */
 .about-section {
   display: none;
-}
-@media screen and (min-width: 768px) {
-  .about-section {
-    max-width: 767px;
-  }
+  margin: 0 auto;
 }
 
 @media screen and (min-width: 1200px) {
   .about-section {
+    display: block;
     max-width: 1440px;
     padding-bottom: 120px;
   }
@@ -885,6 +881,7 @@ img {
   padding-top: 96px;
   padding-bottom: 128px;
   background: #f4f4fd;
+  margin: 0 auto;
 }
 
 .team-title {
@@ -968,9 +965,15 @@ img {
 .team-soc-link:active {
   background-color: var(--btn-accent-color);
 }
+
+@media screen and (min-width: 480px) {
+  .team-section {
+    max-width: 428px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .team-section {
-    margin: 0 auto;
     max-width: 768px;
     padding-top: 96px;
     padding-bottom: 104px;
@@ -996,6 +999,7 @@ img {
   padding-top: 130px;
   padding-bottom: 120px;
   max-width: 100%;
+  margin: 0 auto;
 }
 
 .client-title {
@@ -1030,6 +1034,11 @@ img {
   border: 1px solid;
   border-color: var(--btn-accent-color);
 }
+@media screen and (min-width: 480px) {
+  .client-section {
+    max-width: 428px;
+  }
+}
 @media screen and (min-width: 768px) {
   .client-section {
     max-width: 768px;
@@ -1057,6 +1066,7 @@ img {
   padding-top: 96px;
   padding-bottom: 96px;
   max-width: 100%;
+  margin: 0 auto;
 }
 .footer-background {
   background: var(--background-color);
@@ -1068,8 +1078,6 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #e7e9fc;
-
-  width: 264px;
   text-align: left;
   display: flex;
   flex-direction: column;
@@ -1207,10 +1215,14 @@ img {
 .icon-plane {
   fill: #ffffff;
 }
+@media screen and (min-width: 480px) {
+  .footer-section {
+    max-width: 428px;
+  }
+}
 @media screen and (min-width: 768px) {
   .footer-section {
     max-width: 768px;
-    margin: 0 auto;
   }
   .footer-content {
     flex-direction: row;
