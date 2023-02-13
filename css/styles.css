@@ -285,12 +285,6 @@ img {
     display: flex;
     gap: 56px;
   }
-}
-
-@media screen and (min-width: 768px) {
-  .menu-button {
-    display: none;
-  }
   .current {
     color: var(--btn-accent-color);
     position: relative;
@@ -307,6 +301,12 @@ img {
     border-radius: 2px;
     background-color: var(--btn-accent-color);
   }
+}
+
+@media screen and (min-width: 768px) {
+  .menu-button {
+    display: none;
+  }
 
   .header-border {
     max-width: 768px;
@@ -314,6 +314,8 @@ img {
   }
   .nav-container {
     justify-content: space-between;
+    padding-top: 0;
+    padding-bottom: 0;
   }
   .nav-menu {
     display: flex;
@@ -359,9 +361,8 @@ img {
 
   .address {
     display: flex;
-
-    /* margin-left: auto; */
   }
+
   .address-list {
     display: flex;
     align-items: center;
@@ -533,9 +534,13 @@ img {
   position: absolute;
   left: 50%;
   top: 50%;
-  min-width: 408px;
-  min-height: 576px;
+  width: calc(100% - 36px);
+  max-width: 392px;
   padding: 24px;
+  overflow: auto;
+  height: calc(100% - 48px);
+  max-height: 612px;
+  /* ========================================ТУТ КОСТИЛІ(((================================================ */
   background: #fcfcfc;
   box-shadow: 0px 1px 1px rgb(0 0 0 / 14%), 0px 1px 3px rgb(0 0 0 / 12%),
     0px 2px 1px rgb(0 0 0 / 20%);
@@ -562,7 +567,10 @@ img {
   transition: background-color 250ms var(--cubic), fill 250ms var(--cubic);
 }
 
-.close-btn,
+.close-btn:is(:hover, :focus, :active) {
+  background-color: var(--btn-accent-color);
+  fill: #ffffff;
+}
 .mob-close-button:is(:hover, :focus, :active) {
   background-color: var(--btn-accent-color);
   fill: #ffffff;
@@ -599,7 +607,7 @@ img {
   display: flex;
   flex-direction: column;
   font-family: "Roboto";
-  width: 360px;
+  width: 100%;
 
   font-weight: 400;
   font-size: 12px;
@@ -645,7 +653,7 @@ img {
 }
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++NO TEXTAREA CSS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!+++++++++++++++++++++++++++++++++++++ */
 .textarea-box {
-  width: 360px;
+  width: 100%;
   height: 120px;
   resize: none;
   background-color: transparent;
@@ -720,12 +728,6 @@ img {
   border: none;
 }
 
-/* .check-wrap {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
-
 .submit-btn {
   display: block;
   margin: 0 auto;
@@ -747,6 +749,16 @@ img {
 .submit-btn:hover:is(:hover, :focus, :active) {
   background-color: var(--btn-accent-color);
 }
+
+@media screen and (min-width: 480px) {
+  .modal {
+    max-width: 408px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+}
+
 /* /* ==============================BENEFITS========================= *++++++++++++++/ */
 
 .benefits-section {
@@ -1287,15 +1299,15 @@ img {
 .portfolio-section {
   padding-top: 96px;
   padding-bottom: 120px;
+  margin: 0 auto;
 }
 
 .portfolio-btn-list {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 72px;
-  /* margin-right: auto;
-  margin-left: auto; */
+  flex-wrap: wrap;
+  gap: 24px;
+  row-gap: 16px;
+  margin-bottom: 48px;
 }
 
 .portfolio-btn {
@@ -1307,9 +1319,9 @@ img {
     border-color 250ms var(--cubic), box-shadow 250ms var(--cubic);
 }
 
-.portfolio-btn-item:not(:last-child) {
+/* .portfolio-btn-item:not(:last-child) {
   margin-right: 24px;
-}
+} */
 
 .portfolio-btn-text {
   font-family: "Roboto", sans-serif;
@@ -1335,13 +1347,12 @@ img {
 .exmples-list {
   display: flex;
   flex-wrap: wrap;
-  column-gap: 24px;
-  row-gap: 48px;
+  justify-content: space-between;
 }
 
 .portfolio-item {
-  flex-basis: calc((100% - 48px) / 3);
   background-color: #ffffff;
+  margin-bottom: 48px;
 }
 .portfolio-item-link {
   display: block;
@@ -1399,18 +1410,65 @@ img {
   transition: transform 250ms var(--cubic);
 }
 
+@media screen and (min-width: 480px) {
+  .portfolio-section {
+    padding-top: 48px;
+    padding-bottom: 48px;
+    max-width: 428px;
+  }
+
+  .portfolio-item {
+    flex-basis: calc((100% - 24px) / 2);
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio-section {
+    padding-top: 64px;
+    padding-bottom: 96px;
+    max-width: 768px;
+  }
+  .portfolio-btn-list {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 72px;
+  }
+
+  .exmples-list {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 72px;
+    column-gap: 24px;
+  }
+  .portfolio-item {
+    flex-basis: calc((100% - 48px) / 3);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio-section {
+    padding-top: 96px;
+    padding-bottom: 120px;
+    max-width: 1440px;
+  }
+}
+
 /* ==========================================================CONTACTS========================================================= */
 
 .contact-background {
+  margin: 0 auto;
   background: #ffffff;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 1440px 100%;
+  background-size: 100%;
   box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
 }
 
 .contact-container {
-  max-width: 1440px;
+  max-width: 100%;
   max-height: fit-content;
   text-align: center;
   padding-bottom: 188px;
@@ -1430,4 +1488,18 @@ img {
   margin-right: auto;
   margin-bottom: 48px;
   color: var(--brand-color);
+}
+
+@media screen and (min-width: 480px) {
+  .contact-background {
+    padding-top: 48px;
+    padding-bottom: 48px;
+    max-width: 428px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contact-background {
+    max-width: 1440px;
+  }
 }
