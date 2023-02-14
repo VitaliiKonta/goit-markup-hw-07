@@ -145,6 +145,8 @@ img {
   left: 0;
   width: 100%;
   height: 100vh;
+  z-index: 1;
+  overflow-y: auto;
   background-color: #ffffff;
   transition: transform 250ms var(--cubic);
   transform: translatey(100%);
@@ -419,7 +421,7 @@ img {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/people-office-bgi.jpg);
+    url(../images/people-office-bgi-mob.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -430,6 +432,19 @@ img {
   padding-top: 112px;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero-section {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-office-bgi-mob@2x.jpg);
+  }
 }
 
 .hero-title {
@@ -469,6 +484,24 @@ img {
 @media screen and (min-width: 480px) {
   .hero-section {
     max-width: 428px;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-office-bgi-tab.jpg);
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero-section {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/people-office-bgi-tab@2x.jpg);
+    }
   }
 }
 
@@ -481,6 +514,18 @@ img {
       ),
       url(../images/people-office-bgi.jpg);
   }
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero-section {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/people-office-bgi@2x.jpg);
+    }
+  }
   .hero-title {
     font-size: 56px;
     max-width: 494px;
@@ -492,14 +537,6 @@ img {
 @media screen and (min-width: 1200px) {
   .hero-section {
     max-width: 1440px;
-    background-image: linear-gradient(
-        rgba(46, 47, 66, 0.7),
-        rgba(46, 47, 66, 0.7)
-      ),
-      url(../images/people-office-bgi.jpg);
-    background-size: cover;
-    padding-top: 188px;
-    padding-bottom: 188px;
   }
 
   .hero-title {
