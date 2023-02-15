@@ -902,10 +902,11 @@ img {
   .about-list {
     display: flex;
     justify-content: center;
+    gap: 24px;
   }
-  .about-item:not(:last-child) {
+  /* .about-item:not(:last-child) {
     margin-right: 24px;
-  }
+  } */
   .about-title {
     font-weight: 700;
     font-size: 36px;
