@@ -450,7 +450,7 @@ img {
   font-size: 36px;
   line-height: 1.11;
   letter-spacing: 0.02em;
-  max-width: 318px;
+  max-width: 320px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 72px;
@@ -505,6 +505,8 @@ img {
 
 @media screen and (min-width: 768px) {
   .hero-section {
+    padding-top: 112px;
+    padding-bottom: 108px;
     max-width: 768px;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
@@ -526,7 +528,7 @@ img {
   }
   .hero-title {
     font-size: 56px;
-    max-width: 494px;
+    max-width: 496px;
     margin-bottom: 40px;
     line-height: 1.07;
   }
@@ -535,6 +537,8 @@ img {
 @media screen and (min-width: 1200px) {
   .hero-section {
     max-width: 1440px;
+    padding-top: 188px;
+    padding-bottom: 188px;
   }
 
   .hero-title {
@@ -866,6 +870,7 @@ img {
     height: 112px;
     background: #f4f4fd;
     border-radius: 4px;
+    margin-bottom: 8px;
   }
   .benefits-item-list {
     display: flex;
@@ -1017,7 +1022,6 @@ img {
 
 @media screen and (min-width: 768px) {
   .team-section {
-    padding-top: 96px;
     padding-bottom: 104px;
   }
 }
@@ -1037,8 +1041,8 @@ img {
 /* <!--============================= CUSTOMERS================================= --> */
 
 .client-section {
-  padding-top: 130px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 96px;
   max-width: 100%;
   margin: 0 auto;
 }
@@ -1091,6 +1095,8 @@ img {
 
 @media screen and (min-width: 1200px) {
   .client-section {
+    padding-top: 120px;
+    padding-bottom: 120px;
   }
   .client-list {
     display: flex;
